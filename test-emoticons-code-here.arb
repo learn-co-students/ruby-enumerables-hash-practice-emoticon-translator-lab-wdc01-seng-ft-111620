@@ -1,0 +1,23 @@
+test-emoticons-code-here
+
+emoticons.each do |key, value|
+    emoticon_library[key][:english => value[0], :japanese => value[1]]
+  end
+  emoticon_library
+
+  # everything below passes so far....
+
+  require 'yaml'
+
+  def load_library(file_path)
+    emoticons = YAML.load_file('./lib/emoticons.yml')
+    emoticon_library = {}
+    # puts emoticons.inspect
+  
+    emoticons.each do |key| 
+      emoticon_library = {
+        :english => {}, 
+        :japanese => {}
+      }
+  end
+  end
